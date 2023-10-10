@@ -9,14 +9,14 @@
 	FROM [Suppliers]
 
 -- Задача 4. В упорядоченном по стоимости виде вывести название и стоимость товаров от всех поставщиков, кроме поставщика 1.
-	SELECT ProductName, SupplierID, Price
+	SELECT ProductName, Price
 	FROM [Products]
 	WHERE 
 	NOT SupplierID=1
 	ORDER BY Price ASC 
 
 -- Задача 5. Вывести контактные имена клиентов, кроме тех, что из France и USA.
-	SELECT CustomerName,  Country
+	SELECT CustomerName
 	FROM [Customers]
 	WHERE	
 	Country NOT IN ('France', 'USA')
